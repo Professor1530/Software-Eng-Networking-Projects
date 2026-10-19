@@ -1,0 +1,118 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="G2g6e3UkSMHYy6IeWjr_">
+    <mxGraphModel dx="864" dy="510" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ttl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=15;fontStyle=1;" value="State Machine Diagram – UC5: Check Fill Threshold  |  Object: Smart Bin" vertex="1">
+          <mxGeometry height="34" width="1000" x="50" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="1" style="ellipse;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="28" width="28" x="500" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Idle&lt;/b&gt;&#xa;─────────────&#xa;entry / sensor initialised&#xa;do / await fill-level reading" vertex="1">
+          <mxGeometry height="80" width="230" x="420" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Monitoring&lt;/b&gt;&#xa;─────────────&#xa;entry / start periodic reading&#xa;do / transmit fill-level every cycle" vertex="1">
+          <mxGeometry height="85" width="230" x="420" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Below Threshold&lt;/b&gt;&#xa;─────────────&#xa;entry / log reading to DB&#xa;do / no alert generated" vertex="1">
+          <mxGeometry height="85" width="220" x="130" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="s4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Warning State (80%)&lt;/b&gt;&#xa;─────────────&#xa;entry / generateWarningAlert()&#xa;do / notify dashboard&#xa;exit / log alert with timestamp" vertex="1">
+          <mxGeometry height="100" width="240" x="415" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="s5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFD966;strokeColor=#d6b656;strokeWidth=2.5;fontSize=11;fontStyle=1;verticalAlign=middle;" value="&lt;b&gt;Critical State (100%)&lt;/b&gt;&#xa;─────────────&#xa;entry / generateCriticalAlert()&#xa;do / trigger Route Optimization&#xa;exit / await truck dispatch" vertex="1">
+          <mxGeometry height="100" width="240" x="720" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="s6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Awaiting Collection&lt;/b&gt;&#xa;─────────────&#xa;entry / route optimisation triggered&#xa;do / GPS tracked by fleet system" vertex="1">
+          <mxGeometry height="90" width="240" x="720" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="s7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Emptied / Reset&lt;/b&gt;&#xa;─────────────&#xa;entry / truck empties bin&#xa;do / sensor resets to 0%&#xa;exit / resume monitoring" vertex="1">
+          <mxGeometry height="95" width="240" x="415" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="1" style="ellipse;fillColor=#000000;strokeColor=#000000;strokeWidth=4;" value="" vertex="1">
+          <mxGeometry height="28" width="28" x="500" y="715" as="geometry" />
+        </mxCell>
+        <mxCell id="t0" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;strokeWidth=2;" target="s1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" edge="1" parent="1" source="s1" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;fontStyle=2;strokeWidth=2;strokeColor=#6c8ebf;" target="s2" value="sensor activated / begin readings">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" edge="1" parent="1" source="s2" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;fontStyle=2;strokeWidth=2;strokeColor=#82b366;" target="s3" value="fillLevel &lt; 80% / log data">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="292" />
+              <mxPoint x="240" y="442" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t3" edge="1" parent="1" source="s2" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;fontStyle=2;strokeWidth=2;strokeColor=#d6b656;" target="s4" value="fillLevel ≥ 80% / generate warning">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" edge="1" parent="1" source="s2" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;fontStyle=2;strokeWidth=2;strokeColor=#d6b656;" target="s5" value="fillLevel = 100% / generate critical">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="840" y="292" />
+              <mxPoint x="840" y="442" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t5" edge="1" parent="1" source="s3" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;fontStyle=2;strokeWidth=2;strokeColor=#82b366;dashed=1;" target="s2" value="next cycle / resume">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="130" y="442" />
+              <mxPoint x="130" y="292" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t6" edge="1" parent="1" source="s4" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;fontStyle=2;strokeWidth=2;strokeColor=#d6b656;" target="s5" value="fillLevel = 100%">
+          <mxGeometry relative="1" x="0.0769" y="-10" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t7" edge="1" parent="1" source="s4" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;fontStyle=2;strokeWidth=1.5;strokeColor=#d6b656;dashed=1;" target="s2" value="fillLevel drops below 80% / alert cleared">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="535" y="400" />
+              <mxPoint x="535" y="292" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t8" edge="1" parent="1" source="s5" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;fontStyle=2;strokeWidth=2;strokeColor=#d79b00;" target="s6" value="truck dispatched / route generated">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t9" edge="1" parent="1" source="s6" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;fontStyle=2;strokeWidth=2;strokeColor=#d79b00;" target="s7" value="truck arrives / bin emptied">
+          <mxGeometry relative="1" x="0.1607" y="18" as="geometry">
+            <mxPoint x="12" y="-6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t10" edge="1" parent="1" source="s7" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;fontStyle=2;strokeWidth=2;strokeColor=#82b366;" target="s2" value="sensor resets to 0% / resume monitoring">
+          <mxGeometry relative="1" x="-0.5918" y="-25" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="535" y="580" />
+              <mxPoint x="535" y="335" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t11" edge="1" parent="1" source="s7" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;fontStyle=2;dashed=1;strokeWidth=1.5;strokeColor=#555;" target="end" value="bin decommissioned">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="leg" parent="1" style="text;html=1;strokeColor=#555;fillColor=#f9f9f9;align=center;fontSize=10;fontStyle=2;rounded=1;" value="State format:  Name  |  entry / action on entering   do / ongoing action   exit / action on leaving  |  Dashed arrow = optional/alternative transition" vertex="1">
+          <mxGeometry height="24" width="1000" x="50" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="x0t3QIzMd60EJ_Iuvurk-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="" vertex="1">
+          <mxGeometry height="25" width="25" x="501.5" y="716.5" as="geometry" />
+        </mxCell>
+        <mxCell id="x0t3QIzMd60EJ_Iuvurk-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Start" vertex="1">
+          <mxGeometry height="30" width="60" x="484" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="x0t3QIzMd60EJ_Iuvurk-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="End" vertex="1">
+          <mxGeometry height="30" width="60" x="520" y="711.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

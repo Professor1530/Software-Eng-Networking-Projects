@@ -1,0 +1,216 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="CsYIHvNkcdfIzy77aAWx">
+    <mxGraphModel dx="1240" dy="731" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ttl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=15;fontStyle=1;" value="Activity Diagram – UC11: Flag Sensor Malfunction (Bin Monitoring Subsystem)" vertex="1">
+          <mxGeometry height="34" width="1080" x="60" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="h1" parent="1" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;fontStyle=1;fontSize=11;rounded=1;" value="IoT Sensor / Smart Bin" vertex="1">
+          <mxGeometry height="36" width="190" x="40" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="h2" parent="1" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=center;verticalAlign=middle;fontStyle=1;fontSize=11;rounded=1;" value="Central Monitoring Server" vertex="1">
+          <mxGeometry height="36" width="210" x="240" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="h3" parent="1" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;fontStyle=1;fontSize=11;rounded=1;" value="Alert Manager" vertex="1">
+          <mxGeometry height="36" width="190" x="460" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="h4" parent="1" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;fontStyle=1;fontSize=11;rounded=1;" value="Maintenance Team" vertex="1">
+          <mxGeometry height="36" width="200" x="660" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="h5" parent="1" style="text;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;align=center;verticalAlign=middle;fontStyle=1;fontSize=11;rounded=1;" value="System Dashboard" vertex="1">
+          <mxGeometry height="36" width="200" x="870" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="bg1" parent="1" style="strokeColor=#6c8ebf;fillColor=#dae8fc;opacity=20;" value="" vertex="1">
+          <mxGeometry height="969" width="190" x="40" y="91" as="geometry" />
+        </mxCell>
+        <mxCell id="bg2" parent="1" style="strokeColor=#82b366;fillColor=#d5e8d4;opacity=20;" value="" vertex="1">
+          <mxGeometry height="969" width="210" x="240" y="91" as="geometry" />
+        </mxCell>
+        <mxCell id="bg3" parent="1" style="strokeColor=#d6b656;fillColor=#fff2cc;opacity=20;" value="" vertex="1">
+          <mxGeometry height="969" width="190" x="460" y="91" as="geometry" />
+        </mxCell>
+        <mxCell id="bg4" parent="1" style="strokeColor=#b85450;fillColor=#f8cecc;opacity=20;" value="" vertex="1">
+          <mxGeometry height="970" width="200" x="660" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="bg5" parent="1" style="strokeColor=#9673a6;fillColor=#e1d5e7;opacity=20;" value="" vertex="1">
+          <mxGeometry height="969" width="200" x="870" y="91" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="1" style="ellipse;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="120" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="A1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;fontStyle=1;" value="Sensor Transmits&#xa;Data to Server" vertex="1">
+          <mxGeometry height="48" width="160" x="55" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="A2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" value="Server Receives&#xa;Sensor Transmission" vertex="1">
+          <mxGeometry height="48" width="170" x="260" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="D1" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;fontStyle=1;" value="Data&#xa;Received?" vertex="1">
+          <mxGeometry height="68" width="130" x="282" y="263" as="geometry" />
+        </mxCell>
+        <mxCell id="A3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" value="Check Transmission&#xa;Timeout / No Signal" vertex="1">
+          <mxGeometry height="48" width="170" x="262" y="526" as="geometry" />
+        </mxCell>
+        <mxCell id="A4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" value="Validate Data&#xa;Format &amp; Range" vertex="1">
+          <mxGeometry height="48" width="170" x="50" y="332" as="geometry" />
+        </mxCell>
+        <mxCell id="D2" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;fontStyle=1;" value="Data&#xa;Valid?" vertex="1">
+          <mxGeometry height="68" width="130" x="490" y="322" as="geometry" />
+        </mxCell>
+        <mxCell id="A5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" value="Data Valid&#xa;Process Normally" vertex="1">
+          <mxGeometry height="48" width="170" x="255" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="A6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=10;fontStyle=1;" value="Flag Sensor as&#xa;Malfunctioning" vertex="1">
+          <mxGeometry height="48" width="160" x="475" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="A7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" value="Log Malfunction Event&#xa;(BinID, Time, Error Type)" vertex="1">
+          <mxGeometry height="48" width="160" x="475" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="A8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;fontSize=10;fontStyle=1;" value="Create Maintenance&#xa;Request Ticket" vertex="1">
+          <mxGeometry height="48" width="160" x="668" y="331" as="geometry" />
+        </mxCell>
+        <mxCell id="A9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" value="Send Notification to&#xa;Maintenance Technician" vertex="1">
+          <mxGeometry height="48" width="160" x="680" y="548" as="geometry" />
+        </mxCell>
+        <mxCell id="A10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" value="Update Dashboard&#xa;Sensor Marked Offline" vertex="1">
+          <mxGeometry height="48" width="160" x="900" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="A11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" value="Technician Receives&#xa;Maintenance Alert" vertex="1">
+          <mxGeometry height="48" width="160" x="680" y="636" as="geometry" />
+        </mxCell>
+        <mxCell id="A12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" value="Technician Inspects&#xa;Sensor On-Site" vertex="1">
+          <mxGeometry height="48" width="160" x="680" y="724" as="geometry" />
+        </mxCell>
+        <mxCell id="D3" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;fontStyle=1;" value="Sensor&#xa;Repairable?" vertex="1">
+          <mxGeometry height="68" width="136" x="692" y="812" as="geometry" />
+        </mxCell>
+        <mxCell id="A13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" value="Repair &amp; Recalibrate&#xa;Sensor" vertex="1">
+          <mxGeometry height="48" width="140" x="495" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="A14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" value="Replace Sensor&#xa;with New Unit" vertex="1">
+          <mxGeometry height="48" width="140" x="920" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="A15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=10;fontStyle=1;" value="Mark Sensor Online&#xa;Close Maintenance Ticket" vertex="1">
+          <mxGeometry height="48" width="170" x="480" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="A16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" value="Dashboard Updated&#xa;Sensor Back Online" vertex="1">
+          <mxGeometry height="48" width="160" x="900" y="947" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="1" style="ellipse;fillColor=#000000;strokeColor=#000000;strokeWidth=4;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="545" y="995" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;" target="A1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="A1" style="edgeStyle=orthogonalEdgeStyle;" target="A2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="A2" style="edgeStyle=orthogonalEdgeStyle;" target="D1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="D1" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;fontStyle=2;" target="A4" value="Yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="D1" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;fontStyle=2;" target="A3" value="No">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="282" y="297" />
+              <mxPoint x="282" y="399" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5b" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="362.46" y="399" />
+              <mxPoint x="362.46" y="399" />
+              <mxPoint x="577.46" y="399" />
+            </Array>
+            <mxPoint x="362.4165217391305" y="526" as="sourcePoint" />
+            <mxPoint x="572.50347826087" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="A4" style="edgeStyle=orthogonalEdgeStyle;" target="D2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="D2" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;fontStyle=2;" target="A5" value="Yes">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="555" y="297" />
+              <mxPoint x="487" y="297" />
+              <mxPoint x="487" y="350" />
+              <mxPoint x="330" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="D2" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;fontStyle=2;" target="A6" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="A6" style="edgeStyle=orthogonalEdgeStyle;" target="A7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="A7" style="edgeStyle=orthogonalEdgeStyle;" target="A8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10b" edge="1" parent="1" source="A7" style="edgeStyle=orthogonalEdgeStyle;" target="A10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="A8" style="edgeStyle=orthogonalEdgeStyle;" target="A9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="A9" style="edgeStyle=orthogonalEdgeStyle;" target="A11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="A11" style="edgeStyle=orthogonalEdgeStyle;" target="A12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="A12" style="edgeStyle=orthogonalEdgeStyle;" target="D3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="D3" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;fontStyle=2;" target="A13" value="Yes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="D3" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;fontStyle=2;" target="A14" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="A13" style="edgeStyle=orthogonalEdgeStyle;" target="A15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="A14" style="edgeStyle=orthogonalEdgeStyle;" target="A15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="910" y="844" />
+              <mxPoint x="910" y="944" />
+              <mxPoint x="650" y="944" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e19" edge="1" parent="1" source="A15" style="edgeStyle=orthogonalEdgeStyle;" target="A16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e20" edge="1" parent="1" source="A15" style="edgeStyle=orthogonalEdgeStyle;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e21" edge="1" parent="1" source="A5" style="edgeStyle=orthogonalEdgeStyle;" target="end">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="345" y="508" />
+              <mxPoint x="345" y="1010" />
+              <mxPoint x="545" y="1010" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RcDr4taIH1UGEbTC1uuE-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="End" vertex="1">
+          <mxGeometry height="30" width="60" x="530" y="1025" as="geometry" />
+        </mxCell>
+        <mxCell id="RcDr4taIH1UGEbTC1uuE-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="" vertex="1">
+          <mxGeometry height="25" width="25" x="547.5" y="997.5" as="geometry" />
+        </mxCell>
+        <mxCell id="RcDr4taIH1UGEbTC1uuE-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Start" vertex="1">
+          <mxGeometry height="30" width="60" x="105" y="91" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,178 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="-s8WUBFf0PVaTqaRabnO">
+    <mxGraphModel dx="1426" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ttl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=16;fontStyle=1;" value="4.1 Initial Design Class Diagram – Bin Monitoring Subsystem (SWCMS)" vertex="1">
+          <mxGeometry height="36" width="1280" x="60" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="SmartBin_title" parent="1" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=12;" value="SmartBin" vertex="1">
+          <mxGeometry height="220" width="240" x="60" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="SmartBin_attrs" parent="SmartBin_title" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="- binID : String&#xa;- location : String&#xa;- fillLevel : float&#xa;- status : String&#xa;- lastUpdated : DateTime&#xa;- sensorID : String" vertex="1">
+          <mxGeometry height="100" width="240" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="SmartBin_div" parent="SmartBin_title" style="line;strokeColor=#6c8ebf;" value="" vertex="1">
+          <mxGeometry height="8" width="240" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="SmartBin_ops" parent="SmartBin_title" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ measureFillLevel() : float&#xa;+ transmitData() : void&#xa;+ resetToEmpty() : void&#xa;+ getStatus() : String" vertex="1">
+          <mxGeometry height="82" width="240" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="IoTSensor_title" parent="1" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=12;" value="IoTSensor" vertex="1">
+          <mxGeometry height="210" width="240" x="60" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="IoTSensor_attrs" parent="IoTSensor_title" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="- sensorID : String&#xa;- type : String&#xa;- status : String&#xa;- lastPing : DateTime&#xa;- errorCode : String&#xa;- firmwareVersion : String" vertex="1">
+          <mxGeometry height="100" width="240" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="IoTSensor_div" parent="IoTSensor_title" style="line;strokeColor=#6c8ebf;" value="" vertex="1">
+          <mxGeometry height="8" width="240" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="IoTSensor_ops" parent="IoTSensor_title" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ readFillLevel() : float&#xa;+ transmitReading() : void&#xa;+ runDiagnostic() : boolean&#xa;+ flagMalfunction() : void" vertex="1">
+          <mxGeometry height="72" width="240" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="Server_title" parent="1" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=12;" value="MonitoringServer" vertex="1">
+          <mxGeometry height="210" width="250" x="390" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Server_attrs" parent="Server_title" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="- serverID : String&#xa;- ipAddress : String&#xa;- uptime : DateTime&#xa;- connectedBins : int&#xa;- lastSyncTime : DateTime" vertex="1">
+          <mxGeometry height="90" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="Server_div" parent="Server_title" style="line;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="8" width="250" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Server_ops" parent="Server_title" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ receiveData(binID, fillLevel) : void&#xa;+ validateData(data) : boolean&#xa;+ logReading(reading) : void&#xa;+ checkThreshold(fillLevel) : void&#xa;+ forwardToAlertMgr() : void" vertex="1">
+          <mxGeometry height="82" width="250" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="FillRecord_title" parent="1" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=12;" value="FillLevelRecord" vertex="1">
+          <mxGeometry height="185" width="250" x="390" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="FillRecord_attrs" parent="FillRecord_title" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="- recordID : String&#xa;- binID : String&#xa;- fillLevel : float&#xa;- timestamp : DateTime&#xa;- isValid : boolean" vertex="1">
+          <mxGeometry height="90" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="FillRecord_div" parent="FillRecord_title" style="line;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="8" width="250" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="FillRecord_ops" parent="FillRecord_title" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ save() : void&#xa;+ getHistory(binID) : List&#xa;+ markInvalid() : void" vertex="1">
+          <mxGeometry height="57" width="250" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="AlertMgr_title" parent="1" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=12;" value="AlertManager" vertex="1">
+          <mxGeometry height="210" width="250" x="730" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AlertMgr_attrs" parent="AlertMgr_title" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="- managerID : String&#xa;- warningThreshold : float = 80&#xa;- criticalThreshold : float = 100&#xa;- activeAlerts : List&lt;Alert&gt;" vertex="1">
+          <mxGeometry height="80" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="AlertMgr_div" parent="AlertMgr_title" style="line;strokeColor=#d6b656;" value="" vertex="1">
+          <mxGeometry height="8" width="250" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="AlertMgr_ops" parent="AlertMgr_title" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ checkThreshold(fillLevel) : String&#xa;+ generateAlert(type, binID) : Alert&#xa;+ logAlert(alert) : void&#xa;+ resolveAlert(alertID) : void&#xa;+ getActiveAlerts() : List" vertex="1">
+          <mxGeometry height="92" width="250" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="Alert_title" parent="1" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=12;" value="Alert" vertex="1">
+          <mxGeometry height="205" width="250" x="730" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="Alert_attrs" parent="Alert_title" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="- alertID : String&#xa;- alertType : String&#xa;- binID : String&#xa;- fillLevel : float&#xa;- timestamp : DateTime&#xa;- status : String&#xa;- location : String" vertex="1">
+          <mxGeometry height="120" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="Alert_div" parent="Alert_title" style="line;strokeColor=#d6b656;" value="" vertex="1">
+          <mxGeometry height="8" width="250" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Alert_ops" parent="Alert_title" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ acknowledge() : void&#xa;+ resolve() : void&#xa;+ getAlertType() : String" vertex="1">
+          <mxGeometry height="47" width="250" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="Dashboard_title" parent="1" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;fontSize=12;" value="Dashboard" vertex="1">
+          <mxGeometry height="190" width="250" x="1070" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Dashboard_attrs" parent="Dashboard_title" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="- dashboardID : String&#xa;- displayedBins : List&lt;SmartBin&gt;&#xa;- activeAlerts : List&lt;Alert&gt;&#xa;- lastRefresh : DateTime" vertex="1">
+          <mxGeometry height="80" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="Dashboard_div" parent="Dashboard_title" style="line;strokeColor=#9673a6;" value="" vertex="1">
+          <mxGeometry height="8" width="250" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Dashboard_ops" parent="Dashboard_title" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ updateBinStatus(binID, level) : void&#xa;+ displayAlert(alert) : void&#xa;+ markSensorOffline(binID) : void&#xa;+ refreshMap() : void" vertex="1">
+          <mxGeometry height="72" width="250" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="Ticket_title" parent="1" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;fontSize=12;" value="MaintenanceTicket" vertex="1">
+          <mxGeometry height="210" width="250" x="1070" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="Ticket_attrs" parent="Ticket_title" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="- ticketID : String&#xa;- binID : String&#xa;- sensorID : String&#xa;- errorCode : String&#xa;- status : String&#xa;- createdAt : DateTime&#xa;- closedAt : DateTime" vertex="1">
+          <mxGeometry height="120" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="Ticket_div" parent="Ticket_title" style="line;strokeColor=#b85450;" value="" vertex="1">
+          <mxGeometry height="8" width="250" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Ticket_ops" parent="Ticket_title" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ createTicket() : void&#xa;+ assignTechnician(id) : void&#xa;+ closeTicket() : void" vertex="1">
+          <mxGeometry height="52" width="250" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="Notif_title" parent="1" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;fontSize=12;" value="Notification" vertex="1">
+          <mxGeometry height="185" width="250" x="730" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="Notif_attrs" parent="Notif_title" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="- notifID : String&#xa;- recipientID : String&#xa;- message : String&#xa;- sentAt : DateTime&#xa;- channel : String" vertex="1">
+          <mxGeometry height="90" width="250" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="Notif_div" parent="Notif_title" style="line;strokeColor=#b85450;" value="" vertex="1">
+          <mxGeometry height="8" width="250" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Notif_ops" parent="Notif_title" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ send() : void&#xa;+ markDelivered() : void&#xa;+ getStatus() : String" vertex="1">
+          <mxGeometry height="57" width="250" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" edge="1" parent="1" source="SmartBin_title" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6c8ebf;strokeWidth=2;endArrow=block;endFill=1;startArrow=ERmanyToOne;startFill=0;" target="IoTSensor_title" value="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r1lbl" parent="1" style="text;html=1;fontSize=10;fontStyle=2;" value="has ◆" vertex="1">
+          <mxGeometry height="18" width="60" x="110" y="316" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" edge="1" parent="1" source="SmartBin_title" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6c8ebf;strokeWidth=2;endArrow=open;endFill=0;" target="Server_title" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2lbl" parent="1" style="text;html=1;fontSize=10;fontStyle=2;" value="sends data to" vertex="1">
+          <mxGeometry height="18" width="90" x="230" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" edge="1" parent="1" source="Server_title" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#82b366;strokeWidth=2;endArrow=open;endFill=0;" target="FillRecord_title" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3lbl" parent="1" style="text;html=1;fontSize=10;fontStyle=2;" value="logs 1..*" vertex="1">
+          <mxGeometry height="18" width="60" x="465" y="298" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" edge="1" parent="1" source="Server_title" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#82b366;strokeWidth=2;endArrow=open;endFill=0;" target="AlertMgr_title" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4lbl" parent="1" style="text;html=1;fontSize=10;fontStyle=2;" value="triggers" vertex="1">
+          <mxGeometry height="18" width="60" x="620" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="r5" edge="1" parent="1" source="AlertMgr_title" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#d6b656;strokeWidth=2;endArrow=block;endFill=1;startArrow=ERmanyToOne;startFill=0;" target="Alert_title" value="1..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5lbl" parent="1" style="text;html=1;fontSize=10;fontStyle=2;" value="creates ◆" vertex="1">
+          <mxGeometry height="18" width="70" x="800" y="298" as="geometry" />
+        </mxCell>
+        <mxCell id="r6" edge="1" parent="1" source="AlertMgr_title" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#d6b656;strokeWidth=2;endArrow=open;endFill=0;dashed=1;" target="Dashboard_title" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r6lbl" parent="1" style="text;html=1;fontSize=10;fontStyle=2;" value="«uses»" vertex="1">
+          <mxGeometry height="18" width="60" x="960" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="r7" edge="1" parent="1" source="Alert_title" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#b85450;strokeWidth=2;endArrow=open;endFill=0;" target="Ticket_title" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r7lbl" parent="1" style="text;html=1;fontSize=10;fontStyle=2;" value="creates" vertex="1">
+          <mxGeometry height="18" width="55" x="1000" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="r8" edge="1" parent="1" source="Ticket_title" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#b85450;strokeWidth=2;endArrow=open;endFill=0;dashed=1;" target="Notif_title" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1195" y="560" />
+              <mxPoint x="1195" y="660" />
+              <mxPoint x="980" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r8lbl" parent="1" style="text;html=1;fontSize=10;fontStyle=2;" value="«sends»" vertex="1">
+          <mxGeometry height="18" width="60" x="1030" y="638" as="geometry" />
+        </mxCell>
+        <mxCell id="leg" parent="1" style="text;html=1;strokeColor=#555;fillColor=#f9f9f9;align=center;fontSize=11;fontStyle=2;rounded=1;" value="◆ Composition (strong ownership)   |   → Association   |   --→ «uses» Dependency   |   + public   - private" vertex="1">
+          <mxGeometry height="28" width="1260" x="60" y="870" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

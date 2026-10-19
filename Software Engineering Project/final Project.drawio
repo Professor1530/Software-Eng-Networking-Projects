@@ -1,0 +1,119 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="3AlYPeRQd9eTq2rgFDh8">
+    <mxGraphModel dx="1584" dy="988" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontColor=#000000;fontStyle=1;fontSize=16;" value="Heart Monitoring Device - UML State Machine Diagram" vertex="1">
+          <mxGeometry height="30" width="440" x="205" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="initial" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="405" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="st_offline" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;" value="OFFLINE" vertex="1">
+          <mxGeometry height="50" width="160" x="340" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="st_ready" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;" value="READY" vertex="1">
+          <mxGeometry height="50" width="160" x="340" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="st_measuring" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;" value="MEASURING" vertex="1">
+          <mxGeometry height="50" width="160" x="340" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="st_processing" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;" value="PROCESSING" vertex="1">
+          <mxGeometry height="50" width="160" x="340" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="st_validreading" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;" value="VALID READING" vertex="1">
+          <mxGeometry height="50" width="160" x="340" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="choice1" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="60" width="150" x="350" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="choice1_label" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontColor=#000000;fontStyle=1;fontSize=11;" value="Threshold Check" vertex="1">
+          <mxGeometry height="20" width="100" x="370" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="st_alertlow" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;" value="ALERT (Low)" vertex="1">
+          <mxGeometry height="50" width="160" x="80" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="st_ok" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;" value="OK (Normal)" vertex="1">
+          <mxGeometry height="50" width="160" x="340" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="st_alerthigh" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;" value="ALERT (High)" vertex="1">
+          <mxGeometry height="50" width="160" x="600" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="st_monitoring" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;" value="MONITORING" vertex="1">
+          <mxGeometry height="50" width="160" x="340" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="st_completed" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;" value="COMPLETED" vertex="1">
+          <mxGeometry height="50" width="160" x="340" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="final_outer" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="400" y="995" as="geometry" />
+        </mxCell>
+        <mxCell id="final_inner" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="24" width="24" x="408" y="1003" as="geometry" />
+        </mxCell>
+        <mxCell id="tr1" edge="1" parent="1" source="initial" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="st_offline">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tr2" edge="1" parent="1" source="st_offline" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="st_ready" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Connect&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tr3" edge="1" parent="1" source="st_ready" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="st_measuring" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Start&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tr4" edge="1" parent="1" source="st_measuring" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="st_processing">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tr5" edge="1" parent="1" source="st_processing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="st_validreading">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tr6" edge="1" parent="1" source="st_validreading" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="choice1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tr7" edge="1" parent="1" source="choice1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;fontSize=11;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;align=center;" target="st_alertlow" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;[value &amp;lt; min] / Trigger Alert&lt;/font&gt;">
+          <mxGeometry relative="1" x="-0.1358" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="160" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr8" edge="1" parent="1" source="choice1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;fontSize=11;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;align=center;" target="st_ok" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;[min &amp;lt;= value &amp;lt;= max]&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tr9" edge="1" parent="1" source="choice1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;fontSize=11;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;align=center;" target="st_alerthigh" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;[value &amp;gt; max] / Trigger Alert&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="680" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr10" edge="1" parent="1" source="st_alertlow" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="st_monitoring">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="705" />
+              <mxPoint x="270" y="855" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr11" edge="1" parent="1" source="st_ok" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="st_monitoring">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tr12" edge="1" parent="1" source="st_alerthigh" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="st_monitoring">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="570" y="705" />
+              <mxPoint x="570" y="855" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tr13" edge="1" parent="1" source="st_monitoring" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="st_completed">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tr14" edge="1" parent="1" source="st_completed" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;fontColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="final_outer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

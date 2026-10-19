@@ -1,0 +1,486 @@
+How to import into draw.io
+
+Go to draw.io
+Click Extras → Edit Diagram (or Ctrl + Shift + X)
+Select all the existing XML, delete it, then paste the contents of the downloaded file
+Click OK — the full diagram renders instantly
+
+BIN MONITORNG Activity Diagram XML
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1300" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- TITLE -->
+    <mxCell id="title" value="UML Activity Diagram – 1.2.2 Bin Monitoring Subsystem Workflow (SWCMS)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="200" y="15" width="1500" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- ── SWIMLANE HEADERS (manual horizontal lanes) ── -->
+
+    <!-- Lane 1 Header: Smart Bin / IoT Sensor -->
+    <mxCell id="lh1" value="Smart Bin / IoT Sensor" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;fontStyle=1;fontSize=11;rounded=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="65" width="220" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="lb1" value="" style="strokeColor=#6c8ebf;fillColor=#dae8fc;opacity=30;" vertex="1" parent="1">
+      <mxGeometry x="40" y="105" width="220" height="1130" as="geometry" />
+    </mxCell>
+
+    <!-- Lane 2 Header: Central Monitoring Server -->
+    <mxCell id="lh2" value="Central Monitoring Server" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=center;verticalAlign=middle;fontStyle=1;fontSize=11;rounded=1;" vertex="1" parent="1">
+      <mxGeometry x="270" y="65" width="220" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="lb2" value="" style="strokeColor=#82b366;fillColor=#d5e8d4;opacity=30;" vertex="1" parent="1">
+      <mxGeometry x="270" y="105" width="220" height="1130" as="geometry" />
+    </mxCell>
+
+    <!-- Lane 3 Header: Alert Manager -->
+    <mxCell id="lh3" value="Alert Manager" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=middle;fontStyle=1;fontSize=11;rounded=1;" vertex="1" parent="1">
+      <mxGeometry x="500" y="65" width="220" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="lb3" value="" style="strokeColor=#d6b656;fillColor=#fff2cc;opacity=30;" vertex="1" parent="1">
+      <mxGeometry x="500" y="105" width="220" height="1130" as="geometry" />
+    </mxCell>
+
+    <!-- Lane 4 Header: System Dashboard -->
+    <mxCell id="lh4" value="System Dashboard" style="text;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;align=center;verticalAlign=middle;fontStyle=1;fontSize=11;rounded=1;" vertex="1" parent="1">
+      <mxGeometry x="730" y="65" width="220" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="lb4" value="" style="strokeColor=#9673a6;fillColor=#e1d5e7;opacity=30;" vertex="1" parent="1">
+      <mxGeometry x="730" y="105" width="220" height="1130" as="geometry" />
+    </mxCell>
+
+    <!-- Lane 5 Header: Maintenance Team -->
+    <mxCell id="lh5" value="Maintenance Team" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;fontStyle=1;fontSize=11;rounded=1;" vertex="1" parent="1">
+      <mxGeometry x="960" y="65" width="220" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="lb5" value="" style="strokeColor=#b85450;fillColor=#f8cecc;opacity=30;" vertex="1" parent="1">
+      <mxGeometry x="960" y="105" width="220" height="1130" as="geometry" />
+    </mxCell>
+
+    <!-- Lane 6 Header: Route Optimization Subsystem -->
+    <mxCell id="lh6" value="Route Optimization Subsystem" style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=center;verticalAlign=middle;fontStyle=1;fontSize=11;rounded=1;" vertex="1" parent="1">
+      <mxGeometry x="1190" y="65" width="220" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="lb6" value="" style="strokeColor=#d79b00;fillColor=#ffe6cc;opacity=30;" vertex="1" parent="1">
+      <mxGeometry x="1190" y="105" width="220" height="1130" as="geometry" />
+    </mxCell>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!--              ACTIVITY NODES               -->
+    <!-- ══════════════════════════════════════════ -->
+
+    <!-- START NODE -->
+    <mxCell id="start" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="135" y="135" width="30" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- A1: IoT Sensor measures fill level -->
+    <mxCell id="A1" value="IoT Ultrasonic Sensor&#xa;Measures Bin Fill Level" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="60" y="200" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- A2: Transmit data wirelessly -->
+    <mxCell id="A2" value="Transmit Fill-Level Data&#xa;Wirelessly to Server" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="60" y="300" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- A3: Receive & validate data -->
+    <mxCell id="A3" value="Receive &amp; Validate&#xa;Incoming Sensor Data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="290" y="300" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- D1: Data valid? -->
+    <mxCell id="D1" value="Data&#xa;Valid?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="310" y="390" width="130" height="70" as="geometry" />
+    </mxCell>
+
+    <!-- A4: Flag sensor malfunction -->
+    <mxCell id="A4" value="Flag Sensor as&#xa;Malfunctioning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="290" y="510" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- A5: Send maintenance notification -->
+    <mxCell id="A5" value="Send Maintenance&#xa;Notification" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="980" y="510" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- A6: Technician inspects & repairs sensor -->
+    <mxCell id="A6" value="Technician Inspects&#xa;&amp; Repairs Sensor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="980" y="600" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- A7: Log valid data to database -->
+    <mxCell id="A7" value="Log Fill-Level Data&#xa;to Database" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="290" y="510" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- NOTE: A4 and A7 share same Y — we need to offset them. Fix: -->
+    <!-- A7 moves to Y=620 when data is valid path -->
+
+    <!-- FORK BAR 1 (after valid data logged) -->
+    <mxCell id="fork1" value="" style="shape=mxgraph.bpmn.shape;perimeter=mxPerimeter.ellipsePerimeter;symbol=terminate;strokeColor=#000000;fillColor=#000000;" vertex="1" parent="1">
+      <mxGeometry x="295" y="640" width="170" height="8" as="geometry" />
+    </mxCell>
+
+    <!-- D2: Fill level >= 80%? -->
+    <mxCell id="D2" value="Fill Level&#xa;≥ 80%?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="540" y="620" width="140" height="70" as="geometry" />
+    </mxCell>
+
+    <!-- A8: No alert needed, continue monitoring -->
+    <mxCell id="A8" value="Continue Monitoring&#xa;(No Action Required)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="290" y="730" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- D3: >= 100% critical? -->
+    <mxCell id="D3" value="Fill Level&#xa;= 100%&#xa;(Critical)?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="540" y="730" width="140" height="80" as="geometry" />
+    </mxCell>
+
+    <!-- A9: Generate WARNING alert (80%) -->
+    <mxCell id="A9" value="Generate WARNING Alert&#xa;(Bin 80% Full)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="520" y="510" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- A10: Generate CRITICAL alert (100%) -->
+    <mxCell id="A10" value="Generate CRITICAL Alert&#xa;(Bin Overflow Imminent)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="520" y="850" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- A11: Update live dashboard map -->
+    <mxCell id="A11" value="Update Live Bin Status&#xa;on Dashboard Map" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="750" y="300" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- A12: Supervisor views live bin map -->
+    <mxCell id="A12" value="Supervisor Views&#xa;Live Bin Status Map" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="750" y="400" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- A13: Display alert on dashboard -->
+    <mxCell id="A13" value="Display Alert&#xa;on Dashboard" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="750" y="510" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- A14: Log alert with timestamp & location -->
+    <mxCell id="A14" value="Log Alert with&#xa;Timestamp &amp; Location" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="290" y="920" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- A15: Trigger Route Optimization -->
+    <mxCell id="A15" value="Trigger Route Optimization&#xa;Subsystem" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="1210" y="850" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- A16: Route Optimization generates collection route -->
+    <mxCell id="A16" value="Generate Dynamic&#xa;Collection Route" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1210" y="940" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- A17: Store historical data for analysis -->
+    <mxCell id="A17" value="Store Historical Fill-Level&#xa;Data for Analytics" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="290" y="1020" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- A18: Bin emptied, sensor resets to 0% -->
+    <mxCell id="A18" value="Bin Emptied by Truck&#xa;Sensor Resets to 0%" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="60" y="1020" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- D4: More bins to monitor? -->
+    <mxCell id="D4" value="More Bins&#xa;to Monitor?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="80" y="1100" width="140" height="70" as="geometry" />
+    </mxCell>
+
+    <!-- END NODE -->
+    <mxCell id="end" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;strokeWidth=4;" vertex="1" parent="1">
+      <mxGeometry x="135" y="1205" width="30" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!--                   EDGES                   -->
+    <!-- ══════════════════════════════════════════ -->
+
+    <!-- Start → A1 -->
+    <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="start" target="A1" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- A1 → A2 -->
+    <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="A1" target="A2" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- A2 → A3 -->
+    <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="A2" target="A3" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- A3 → D1 -->
+    <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="A3" target="D1" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- D1 → A4 [No - invalid] -->
+    <mxCell id="e5" value="No (Invalid)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontStyle=2;" edge="1" source="D1" target="A4" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="380" y="510" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- A4 → A5 (flag → notify maintenance) -->
+    <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="A4" target="A5" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- A5 → A6 -->
+    <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="A5" target="A6" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- A6 → A1 (repair done, resume monitoring) -->
+    <mxCell id="e8" value="Sensor Repaired,&#xa;Resume Monitoring" style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=9;fontStyle=2;" edge="1" source="A6" target="A1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1070" y="700" />
+          <mxPoint x="1070" y="150" />
+          <mxPoint x="150" y="150" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- D1 → A7 [Yes - valid] -->
+    <mxCell id="e9" value="Yes (Valid)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontStyle=2;" edge="1" source="D1" target="A7" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="440" y="425" />
+          <mxPoint x="440" y="535" />
+          <mxPoint x="380" y="535" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- NOTE: A7 overlaps A4 in same lane. Separate them:
+         A4 (invalid path) → left side of lane2 at Y=510
+         A7 (valid path) → let's keep at Y=620 -->
+
+    <!-- A7 → fork1 -->
+    <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="A7" target="fork1" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- fork1 → D2 (threshold check) -->
+    <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="fork1" target="D2" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- fork1 → A11 (update dashboard simultaneously) -->
+    <mxCell id="e11b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;dashed=1;" edge="1" source="fork1" target="A11" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- A11 → A12 -->
+    <mxCell id="e11c" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="A11" target="A12" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- D2 → A8 [No - below 80%] -->
+    <mxCell id="e12" value="No (&lt; 80%)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontStyle=2;" edge="1" source="D2" target="A8" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="540" y="655" />
+          <mxPoint x="380" y="655" />
+          <mxPoint x="380" y="755" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- A8 → D4 (loop back to check more bins) -->
+    <mxCell id="e12b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="A8" target="D4" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="380" y="800" />
+          <mxPoint x="150" y="800" />
+          <mxPoint x="150" y="1100" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- D2 → A9 [Yes - warning 80%] -->
+    <mxCell id="e13" value="Yes (≥ 80%)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontStyle=2;" edge="1" source="D2" target="A9" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="610" y="620" />
+          <mxPoint x="610" y="535" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- D2 → D3 [check if 100%] -->
+    <mxCell id="e13b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="D2" target="D3" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- A9 → A13 (display warning on dashboard) -->
+    <mxCell id="e14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="A9" target="A13" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- D3 → A10 [Yes - critical 100%] -->
+    <mxCell id="e15" value="Yes (100%)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontStyle=2;" edge="1" source="D3" target="A10" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- D3 → A14 [No - warning only] -->
+    <mxCell id="e15b" value="No (Warning only)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontStyle=2;" edge="1" source="D3" target="A14" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="540" y="770" />
+          <mxPoint x="380" y="770" />
+          <mxPoint x="380" y="945" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- A10 → A15 (trigger route optimization) -->
+    <mxCell id="e16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="A10" target="A15" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- A10 → A14 (log critical alert) -->
+    <mxCell id="e16b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="A10" target="A14" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="520" y="875" />
+          <mxPoint x="380" y="875" />
+          <mxPoint x="380" y="945" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- A13 → A14 -->
+    <mxCell id="e17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="A13" target="A14" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="840" y="600" />
+          <mxPoint x="840" y="945" />
+          <mxPoint x="380" y="945" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- A15 → A16 -->
+    <mxCell id="e18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="A15" target="A16" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- A16 → A18 (truck dispatched, bin emptied) -->
+    <mxCell id="e19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="A16" target="A18" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="1300" y="1000" />
+          <mxPoint x="1300" y="1060" />
+          <mxPoint x="150" y="1060" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- A14 → A17 -->
+    <mxCell id="e20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="A14" target="A17" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- A17 → D4 -->
+    <mxCell id="e21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="A17" target="D4" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="380" y="1090" />
+          <mxPoint x="150" y="1090" />
+          <mxPoint x="150" y="1100" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- A18 → D4 -->
+    <mxCell id="e21b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" source="A18" target="D4" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- D4 → A1 [Yes - more bins] -->
+    <mxCell id="e22" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontStyle=2;" edge="1" source="D4" target="A1" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="80" y="1135" />
+          <mxPoint x="40" y="1135" />
+          <mxPoint x="40" y="225" />
+          <mxPoint x="60" y="225" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- D4 → End [No - all bins monitored] -->
+    <mxCell id="e23" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=10;fontStyle=2;" edge="1" source="D4" target="end" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!--                  LEGEND                   -->
+    <!-- ══════════════════════════════════════════ -->
+
+    <mxCell id="leg_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="1440" y="130" width="230" height="220" as="geometry" />
+    </mxCell>
+    <mxCell id="leg_title" value="LEGEND" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="1440" y="135" width="230" height="25" as="geometry" />
+    </mxCell>
+    <mxCell id="leg1" value="● Filled circle = Initial Node (Start)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1450" y="163" width="215" height="22" as="geometry" />
+    </mxCell>
+    <mxCell id="leg2" value="◉ Bold circle = Final Node (End)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1450" y="185" width="215" height="22" as="geometry" />
+    </mxCell>
+    <mxCell id="leg3" value="◇ Diamond = Decision / Guard Condition" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1450" y="207" width="215" height="22" as="geometry" />
+    </mxCell>
+    <mxCell id="leg4" value="▬ Rounded rect = Action / Activity Node" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1450" y="229" width="215" height="22" as="geometry" />
+    </mxCell>
+    <mxCell id="leg5" value="▬▬ Black bar = Fork / Join (Parallel)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1450" y="251" width="215" height="22" as="geometry" />
+    </mxCell>
+    <mxCell id="leg6" value="--- Dashed arrow = Concurrent Data Flow" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1450" y="273" width="215" height="22" as="geometry" />
+    </mxCell>
+    <mxCell id="leg7" value="→ Solid arrow = Control Flow / Transition" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1450" y="295" width="215" height="22" as="geometry" />
+    </mxCell>
+
+    <!-- SWIMLANE KEY COLOURS -->
+    <mxCell id="leg_col_title" value="SWIMLANE KEY" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="1440" y="370" width="230" height="22" as="geometry" />
+    </mxCell>
+    <mxCell id="lc1" value="Smart Bin / IoT Sensor" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1448" y="396" width="214" height="22" as="geometry" />
+    </mxCell>
+    <mxCell id="lc2" value="Central Monitoring Server" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1448" y="422" width="214" height="22" as="geometry" />
+    </mxCell>
+    <mxCell id="lc3" value="Alert Manager" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1448" y="448" width="214" height="22" as="geometry" />
+    </mxCell>
+    <mxCell id="lc4" value="System Dashboard" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1448" y="474" width="214" height="22" as="geometry" />
+    </mxCell>
+    <mxCell id="lc5" value="Maintenance Team" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1448" y="500" width="214" height="22" as="geometry" />
+    </mxCell>
+    <mxCell id="lc6" value="Route Optimization Subsystem" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1448" y="526" width="214" height="22" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>

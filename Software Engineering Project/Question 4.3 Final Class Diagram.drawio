@@ -1,0 +1,200 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Page-1" id="6tYq6D0zVjSZlwD9gWS9">
+    <mxGraphModel dx="2595" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ttl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=16;fontStyle=1;" value="4.3 Final Design Class Diagram – Bin Monitoring Subsystem (SWCMS)" vertex="1">
+          <mxGeometry height="36" width="1480" x="60" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="SB" parent="1" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=12;" value="SmartBin" vertex="1">
+          <mxGeometry height="260" width="260" x="50" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="SB_a" parent="SB" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="- binID : String {PK}&#xa;- location : String&#xa;- fillLevel : float&#xa;- status : BinStatus&#xa;- lastUpdated : DateTime&#xa;- sensorID : String {FK}" vertex="1">
+          <mxGeometry height="105" width="260" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="SB_d" parent="SB" style="line;strokeColor=#6c8ebf;" value="" vertex="1">
+          <mxGeometry height="8" width="260" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="SB_o" parent="SB" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ measureFillLevel() : float&#xa;+ transmitData(server : MonitoringServer) : void&#xa;+ resetToEmpty() : void&#xa;+ getStatus() : BinStatus&#xa;+ setStatus(s : BinStatus) : void" vertex="1">
+          <mxGeometry height="117" width="260" y="143" as="geometry" />
+        </mxCell>
+        <mxCell id="BinStatus" parent="1" style="swimlane;fontStyle=1;align=center;startSize=40;fillColor=#f0f0f0;strokeColor=#666666;strokeWidth=1.5;fontSize=11;" value="«enumeration»&#xa;BinStatus" vertex="1">
+          <mxGeometry height="110" width="200" x="-70" y="414" as="geometry" />
+        </mxCell>
+        <mxCell id="BinStatus_v" parent="BinStatus" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="ACTIVE&#xa;OFFLINE&#xa;FULL&#xa;UNDER_MAINTENANCE" vertex="1">
+          <mxGeometry height="70" width="200" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="IS" parent="1" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=12;" value="IoTSensor" vertex="1">
+          <mxGeometry height="250" width="260" x="50" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="IS_a" parent="IS" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="- sensorID : String {PK}&#xa;- binID : String {FK}&#xa;- type : String&#xa;- status : SensorStatus&#xa;- lastPing : DateTime&#xa;- errorCode : String&#xa;- firmwareVersion : String" vertex="1">
+          <mxGeometry height="120" width="260" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="IS_d" parent="IS" style="line;strokeColor=#6c8ebf;" value="" vertex="1">
+          <mxGeometry height="8" width="260" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="IS_o" parent="IS" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ readFillLevel() : float&#xa;+ transmitReading() : void&#xa;+ runDiagnostic() : boolean&#xa;+ flagMalfunction(code : String) : void&#xa;+ getStatus() : SensorStatus" vertex="1">
+          <mxGeometry height="92" width="260" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="SensorStatus" parent="1" style="swimlane;fontStyle=1;align=center;startSize=40;fillColor=#f0f0f0;strokeColor=#666666;strokeWidth=1.5;fontSize=11;" value="«enumeration»&#xa;SensorStatus" vertex="1">
+          <mxGeometry height="110" width="200" x="50" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="SS_v" parent="SensorStatus" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="ACTIVE&#xa;FAULTY&#xa;OFFLINE&#xa;UNDER_REPAIR" vertex="1">
+          <mxGeometry height="70" width="200" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="MS" parent="1" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=12;" value="MonitoringServer" vertex="1">
+          <mxGeometry height="270" width="280" x="410" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="MS_a" parent="MS" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="- serverID : String {PK}&#xa;- ipAddress : String&#xa;- uptime : DateTime&#xa;- connectedBins : List&lt;SmartBin&gt;&#xa;- lastSyncTime : DateTime&#xa;- alertManager : AlertManager" vertex="1">
+          <mxGeometry height="105" width="280" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="MS_d" parent="MS" style="line;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="8" width="280" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="MS_o" parent="MS" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ receiveData(binID : String, fillLevel : float) : void&#xa;+ validateData(data : FillLevelRecord) : boolean&#xa;+ logReading(r : FillLevelRecord) : void&#xa;+ checkThreshold(level : float) : AlertType&#xa;+ forwardToAlertManager(type : AlertType) : void&#xa;+ detectSensorTimeout(sensorID : String) : void" vertex="1">
+          <mxGeometry height="127" width="280" y="143" as="geometry" />
+        </mxCell>
+        <mxCell id="FLR" parent="1" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=12;" value="FillLevelRecord" vertex="1">
+          <mxGeometry height="210" width="280" x="410" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="FLR_a" parent="FLR" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="- recordID : String {PK}&#xa;- binID : String {FK}&#xa;- fillLevel : float&#xa;- timestamp : DateTime&#xa;- isValid : boolean&#xa;- validatedBy : String" vertex="1">
+          <mxGeometry height="112" width="280" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="FLR_d" parent="FLR" style="line;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="8" width="280" y="142" as="geometry" />
+        </mxCell>
+        <mxCell id="FLR_o" parent="FLR" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ save() : void&#xa;+ getHistory(binID : String) : List&lt;FillLevelRecord&gt;&#xa;+ markInvalid(reason : String) : void" vertex="1">
+          <mxGeometry height="60" width="280" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="AM" parent="1" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=12;" value="AlertManager" vertex="1">
+          <mxGeometry height="270" width="290" x="790" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="AM_a" parent="AM" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="- managerID : String {PK}&#xa;- warningThreshold : float = 80.0&#xa;- criticalThreshold : float = 100.0&#xa;- activeAlerts : List&lt;Alert&gt;&#xa;- dashboard : Dashboard" vertex="1">
+          <mxGeometry height="95" width="290" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="AM_d" parent="AM" style="line;strokeColor=#d6b656;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="AM_o" parent="AM" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ checkThreshold(level : float) : AlertType&#xa;+ generateAlert(type : AlertType, binID : String) : Alert&#xa;+ logAlert(a : Alert) : void&#xa;+ notifyDashboard(a : Alert) : void&#xa;+ resolveAlert(alertID : String) : void&#xa;+ createMaintenanceTicket(sensorID : String) : void&#xa;+ getActiveAlerts() : List&lt;Alert&gt;" vertex="1">
+          <mxGeometry height="137" width="290" y="133" as="geometry" />
+        </mxCell>
+        <mxCell id="AlertType" parent="1" style="swimlane;fontStyle=1;align=center;startSize=40;fillColor=#f0f0f0;strokeColor=#666666;strokeWidth=1.5;fontSize=11;" value="«enumeration»&#xa;AlertType" vertex="1">
+          <mxGeometry height="90" width="180" x="730" y="397" as="geometry" />
+        </mxCell>
+        <mxCell id="AT_v" parent="AlertType" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="WARNING&#xa;CRITICAL&#xa;SENSOR_FAULT" vertex="1">
+          <mxGeometry height="50" width="180" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="AL" parent="1" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=12;" value="Alert" vertex="1">
+          <mxGeometry height="235" width="290" x="790" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="AL_a" parent="AL" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="- alertID : String {PK}&#xa;- alertType : AlertType&#xa;- binID : String {FK}&#xa;- fillLevel : float&#xa;- timestamp : DateTime&#xa;- status : AlertStatus&#xa;- location : String" vertex="1">
+          <mxGeometry height="127" width="290" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="AL_d" parent="AL" style="line;strokeColor=#d6b656;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="157" as="geometry" />
+        </mxCell>
+        <mxCell id="AL_o" parent="AL" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ acknowledge(supervisorID : String) : void&#xa;+ resolve() : void&#xa;+ getAlertType() : AlertType&#xa;+ getStatus() : AlertStatus" vertex="1">
+          <mxGeometry height="70" width="290" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="DB" parent="1" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;fontSize=12;" value="Dashboard" vertex="1">
+          <mxGeometry height="250" width="290" x="1260" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="DB_a" parent="DB" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="- dashboardID : String {PK}&#xa;- displayedBins : List&lt;SmartBin&gt;&#xa;- activeAlerts : List&lt;Alert&gt;&#xa;- lastRefresh : DateTime&#xa;- supervisorID : String {FK}" vertex="1">
+          <mxGeometry height="95" width="290" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="DB_d" parent="DB" style="line;strokeColor=#9673a6;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="DB_o" parent="DB" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ updateBinStatus(binID : String, level : float) : void&#xa;+ displayAlert(a : Alert) : void&#xa;+ markSensorOffline(binID : String) : void&#xa;+ refreshMap() : void&#xa;+ acknowledgeAlert(alertID : String) : void" vertex="1">
+          <mxGeometry height="117" width="290" y="133" as="geometry" />
+        </mxCell>
+        <mxCell id="MT" parent="1" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;fontSize=12;" value="MaintenanceTicket" vertex="1">
+          <mxGeometry height="240" width="290" x="1180" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="MT_a" parent="MT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="- ticketID : String {PK}&#xa;- binID : String {FK}&#xa;- sensorID : String {FK}&#xa;- errorCode : String&#xa;- technicianID : String {FK}&#xa;- status : TicketStatus&#xa;- createdAt : DateTime&#xa;- closedAt : DateTime" vertex="1">
+          <mxGeometry height="140" width="290" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="MT_d" parent="MT" style="line;strokeColor=#b85450;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="MT_o" parent="MT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ createTicket(sensorID : String) : void&#xa;+ assignTechnician(id : String) : void&#xa;+ sendNotification() : Notification&#xa;+ closeTicket(resolution : String) : void" vertex="1">
+          <mxGeometry height="62" width="290" y="178" as="geometry" />
+        </mxCell>
+        <mxCell id="NT" parent="1" style="swimlane;fontStyle=1;align=center;startSize=28;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;fontSize=12;" value="Notification" vertex="1">
+          <mxGeometry height="210" width="290" x="1180" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="NT_a" parent="NT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="- notifID : String {PK}&#xa;- ticketID : String {FK}&#xa;- recipientID : String&#xa;- message : String&#xa;- channel : String&#xa;- sentAt : DateTime&#xa;- isDelivered : boolean" vertex="1">
+          <mxGeometry height="127" width="290" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="NT_d" parent="NT" style="line;strokeColor=#b85450;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="157" as="geometry" />
+        </mxCell>
+        <mxCell id="NT_o" parent="NT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;fontSize=11;" value="+ send() : void&#xa;+ markDelivered() : void&#xa;+ getStatus() : String" vertex="1">
+          <mxGeometry height="45" width="290" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" edge="1" parent="1" source="SB" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6c8ebf;strokeWidth=2;endArrow=none;startArrow=ERmandOne;startFill=1;" target="IS" value="1     1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r1L" parent="1" style="text;html=1;fontSize=10;fontStyle=2;strokeColor=none;fillColor=none;" value="◆ has" vertex="1">
+          <mxGeometry height="18" width="60" x="95" y="338" as="geometry" />
+        </mxCell>
+        <mxCell id="r_bs" edge="1" parent="1" source="SB" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#666666;strokeWidth=1.5;endArrow=open;endFill=0;" target="BinStatus">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="330" />
+              <mxPoint x="150" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r_ss" edge="1" parent="1" source="IS" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#666666;strokeWidth=1.5;endArrow=open;endFill=0;" target="SensorStatus">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" edge="1" parent="1" source="SB" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#6c8ebf;strokeWidth=2;endArrow=open;endFill=0;fontSize=10;fontStyle=2;" target="MS" value="* sends to  1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" edge="1" parent="1" source="MS" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#82b366;strokeWidth=2;endArrow=open;endFill=0;fontSize=10;fontStyle=2;" target="FLR" value="1     1..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3L" parent="1" style="text;html=1;fontSize=10;fontStyle=2;" value="◆ logs" vertex="1">
+          <mxGeometry height="18" width="60" x="490" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" edge="1" parent="1" source="MS" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#82b366;strokeWidth=2;endArrow=open;endFill=0;fontSize=10;fontStyle=2;" target="AM" value="1     1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4L" parent="1" style="text;html=1;fontSize=10;fontStyle=2;" value="triggers" vertex="1">
+          <mxGeometry height="18" width="60" x="700" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="r_at" edge="1" parent="1" source="AM" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#666666;strokeWidth=1.5;endArrow=open;endFill=0;" target="AlertType">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5" edge="1" parent="1" source="AM" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#d6b656;strokeWidth=2;endArrow=open;endFill=0;fontSize=10;fontStyle=2;" target="AL" value="1     0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5L" parent="1" style="text;html=1;fontSize=10;fontStyle=2;" value="◆ creates" vertex="1">
+          <mxGeometry height="18" width="70" x="860" y="492" as="geometry" />
+        </mxCell>
+        <mxCell id="r6" edge="1" parent="1" source="AM" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#d6b656;strokeWidth=1.5;endArrow=open;endFill=0;fontSize=10;fontStyle=2;" target="DB" value="notifies  1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r7" edge="1" parent="1" source="AM" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#b85450;strokeWidth=2;endArrow=open;endFill=0;fontSize=10;fontStyle=2;" target="MT" value="creates  0..*">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1110" y="205" />
+              <mxPoint x="1110" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r8" edge="1" parent="1" source="MT" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#b85450;strokeWidth=2;endArrow=open;endFill=0;fontSize=10;fontStyle=2;" target="NT" value="1     1..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r8L" parent="1" style="text;html=1;fontSize=10;fontStyle=2;" value="◆ sends" vertex="1">
+          <mxGeometry height="18" width="65" x="1250" y="648" as="geometry" />
+        </mxCell>
+        <mxCell id="leg" parent="1" style="text;html=1;strokeColor=#555;fillColor=#f9f9f9;align=center;fontSize=11;fontStyle=2;rounded=1;" value="◆ Composition (owns)   |   → Association   |   --→ «uses» Dependency   |   {PK} Primary Key   {FK} Foreign Key   |   + public   - private   |   Multiplicity shown on edges (1, 0..*, 1..*)" vertex="1">
+          <mxGeometry height="28" width="1500" x="50" y="1045" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
